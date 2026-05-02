@@ -1,0 +1,49 @@
+=========================================
+LISTADO DE ARCHIVOS DE CONFIGURACIÓN (.org)
+PROYECTO: CASA INTELIGENTE ARDUINO
+=========================================
+
+FORMATO: conf_ini|<S,C,K,B,H>|<VENT>|conf:fin
+Orden de luces: Sala, Comedor, Cocina, Baño, Habitación
+
+-----------------------------------------
+1. MODO: SOLO ÁREAS SOCIALES
+-----------------------------------------
+Comando: conf_ini|1,1,0,0,0|0|conf:fin
+Descripción: Enciende Sala y Comedor. Resto apagado.
+Ventilador: Apagado.
+
+-----------------------------------------
+2. MODO: COCINA Y LIMPIEZA
+-----------------------------------------
+Comando: conf_ini|0,0,1,1,0|120|conf:fin
+Descripción: Enciende Cocina y Baño.
+Ventilador: Velocidad Media (120).
+
+-----------------------------------------
+3. MODO: DESCANSO / NOCHE
+-----------------------------------------
+Comando: conf_ini|0,0,0,0,1|180|conf:fin
+Descripción: Enciende únicamente la Habitación.
+Ventilador: Velocidad Alta (180).
+
+-----------------------------------------
+4. MODO: SEGURIDAD TOTAL (TODO ON)
+-----------------------------------------
+Comando: conf_ini|1,1,1,1,1|0|conf:fin
+Descripción: Enciende todas las luces de la casa.
+Ventilador: Apagado.
+
+-----------------------------------------
+5. MODO: PASILLO Y VENTILACIÓN
+-----------------------------------------
+Comando: conf_ini|1,0,0,1,0|255|conf:fin
+Descripción: Sala y Baño encendidos.
+Ventilador: Potencia Máxima (255).
+
+=========================================
+INSTRUCCIONES DE USO:
+1. Copie la línea del comando deseado (desde conf_ini hasta conf:fin).
+2. Péguelo en el monitor serial o en la app de Bluetooth.
+3. Presione ENTER/Enviar.
+=========================================
